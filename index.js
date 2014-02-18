@@ -20,6 +20,11 @@ function parseDepartures(html) {
 module.exports = function departures(stations, options, cb) {
   var query = {};
 
+  if (typeof options === 'function') {
+    cb = options;
+    options = {};
+  }
+
   if (options.date) {
     var date = moment(options.date);
     query.date = date.format('DD.MM.YY');
