@@ -14,7 +14,7 @@ Calls the callback `cb` with signature `function(err, departureList)` when it
 has fetched a list of departures from the given `stations`.
 
 Each station in `stations` is the ID number used be the Rejseplanen API. Take
-a look in the [metrostations.csv](metrostations.csv) file.
+a look in the [data/](data/) directory.
 
 You can pass some `options`:
 
