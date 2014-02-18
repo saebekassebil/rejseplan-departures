@@ -6,7 +6,7 @@ var aliases = require('./data/aliases.json');
 var argv = require('minimist')(process.argv.slice(2));
 
 if (!argv._.length) {
-  console.log('usage: rjs-deps [stations]');
+  console.log('usage: rjsdep [stations]');
   console.log('');
   console.log('  shows the departure table for each station');
   console.log('');

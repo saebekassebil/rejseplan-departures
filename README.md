@@ -5,7 +5,7 @@ Utilising the API provided by Rejseplanen
 
 ## usage
 
-    usage: rjs-deps <command> [stations]
+    usage: rjsdep <command> [stations]
 
       shows the departure table for each station
 
