@@ -5,6 +5,15 @@ Utilising the API provided by Rejseplanen
 
 ## usage
 
+    usage: rjs-deps <command> [stations]
+
+      shows the departure table for each station
+
+      <command> can be any of the following and defaults to 'list':
+      data    export the data in json format
+      list    show a fancy listview of the departures
+
+
 ## methods
 ```js
 var departures = require('rejseplan-departures');

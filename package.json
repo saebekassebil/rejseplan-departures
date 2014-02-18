@@ -1,6 +1,6 @@
 {
   "name": "rejseplan-depatures",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "author": {
@@ -9,8 +9,13 @@
     "url": "http://saebekassebil.me"
   },
   "license": "MIT",
+  "bin": {
+    "rjsdep": "./cli.js"
+  },
   "dependencies": {
     "moment": "~2.5.1",
-    "cheerio": "~0.13.1"
+    "cheerio": "~0.13.1",
+    "minimist": "0.0.7",
+    "text-table": "~0.2.0"
   }
 }
