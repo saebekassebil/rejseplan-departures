@@ -1,17 +1,27 @@
 {
   "name": "rejseplan-depatures",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.1.1",
+  "description": "Fetch departure lists from Rejseplanen API",
   "main": "index.js",
+  "keywords": ["rejseplanen", "metro", "bus", "tog", "departures"],
+
+  "bin": {
+    "rjsdep": "./cli.js"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/saebekassebil/rejseplan-departures.git"
+  },
+
   "author": {
     "name": "Jakob Miland <saebekassebil>",
     "email": "saebekassebil@gmail.com",
     "url": "http://saebekassebil.me"
   },
+
   "license": "MIT",
-  "bin": {
-    "rjsdep": "./cli.js"
-  },
+
   "dependencies": {
     "moment": "~2.5.1",
     "cheerio": "~0.13.1",
