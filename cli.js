@@ -21,6 +21,8 @@ var showData = false;
 if (argv._[0] === 'data') {
   argv._.shift();
   showData = true;
+} else if (argv._[0] === 'list') {
+  argv._.shift();
 }
 
 var stations = argv._
