@@ -1,9 +1,97 @@
 {
-  "Nørreport st (Metro)": {
+  "vanløse": {
+    "name": "Vanløse",
+    "id": "8603301"
+  },
+  "flintholm": {
+    "name": "Flintholm",
+    "id": "8603302"
+  },
+  "lindevang": {
+    "name": "Lindevang",
+    "id": "8603303"
+  },
+  "fasanvej": {
+    "name": "Fasanvej",
+    "id": "8603304"
+  },
+  "frederiksberg": {
+    "name": "Frederiksberg",
+    "id": "8603305"
+  },
+  "forum": {
+    "name": "Forum",
+    "id": "8603306"
+  },
+  "nørreport": {
+    "name": "Nørreport",
     "id": "8603307"
   },
-
-  "Kongens Nytorv st (Metro)": {
+  "kongens nytorv": {
+    "name": "Kongens Nytorv",
     "id": "8603308"
+  },
+  "kgs. nytorv": {
+    "name": "Kongens Nytorv",
+    "id": "8603308"
+  },
+  "christianshavn": {
+    "name": "Christianshavn",
+    "id": "8603309"
+  },
+  "islands brygge": {
+    "name": "Islands Brygge",
+    "id": "8603310"
+  },
+  "dr byen": {
+    "name": "DR Byen",
+    "id": "8603311"
+  },
+  "sundby": {
+    "name": "Sundby",
+    "id": "8603312"
+  },
+  "bella center": {
+    "name": "Bella Center",
+    "id": "8603313"
+  },
+  "ørestad": {
+    "name": "Ørestad",
+    "id": "8603315"
+  },
+  "vestamager": {
+    "name": "Vestamager",
+    "id": "8603317"
+  },
+  "amagerbro": {
+    "name": "Amagerbro",
+    "id": "8603321"
+  },
+  "lergravsparken": {
+    "name": "Lergravsparken",
+    "id": "8603322"
+  },
+  "øresund": {
+    "name": "Øresund",
+    "id": "8603323"
+  },
+  "amager strand": {
+    "name": "Amager Strand",
+    "id": "8603324"
+  },
+  "femøren": {
+    "name": "Femøren",
+    "id": "8603326"
+  },
+  "kastrup": {
+    "name": "Kastrup",
+    "id": "8603327"
+  },
+  "lufthavnen": {
+    "name": "Lufthavnen",
+    "id": "8603328"
+  },
+  "": {
+    "name": ""
   }
 }

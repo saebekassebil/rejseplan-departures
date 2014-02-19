@@ -2,7 +2,6 @@
 var rdeps = require('./');
 var table = require('text-table');
 var stations = require('./data/stations.json');
-var aliases = require('./data/aliases.json');
 var argv = require('minimist')(process.argv.slice(2));
 
 if (!argv._.length) {
@@ -25,20 +24,32 @@ if (argv._[0] === 'data') {
   argv._.shift();
 }
 
-var stations = argv._
-  .map(function(station) {
-    return (station in aliases) ? aliases[station] : station;
-  }).map(function(station) {
-    return (station in stations) ? stations[station].id : station;
-  });
+var stations = argv._.map(function(station) {
+  station = station.toLowerCase()
+  return (station in stations) ? stations[station].id : station;
+});
 
 rdeps(stations, function(err, departures) {
+  if (err) {
+    if (showData)
+      console.log(JSON.stringify({ error: err }));
+    else
+      console.log('An error occurred: ' + err);
+
+    process.exit(1);
+  }
+
   if (showData)
     return console.log(JSON.stringify(departures, 2));
+  else if (!departures.length)
+    return console.log(
+      'Found no departures at station(s): ' + argv._.join(', ')
+    );
 
   var data = [['station', 'departure', 'direction', 'line']];
 
   departures.forEach(function(dep) {
+    dep.stop = dep.stop.replace(/\sst\s\(\w+\)/, '');
     data.push([
       dep.stop, dep.time, dep.direction, dep.name.split(' ').pop()
     ]);
