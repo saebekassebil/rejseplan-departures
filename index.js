@@ -3,8 +3,12 @@ var http = require('http'),
   moment = require('moment'),
   cheerio = require('cheerio');
 
-function parseDepartures(html) {
+function parseDepartures(html, cb) {
   var $ = cheerio.load(html), deps = [];
+
+  var root = $('MultiDepartureBoard');
+  if (root.attr('error'))
+    return cb(root.attr('error'));
 
   $('Departure').each(function(i, el) {
     var departure = {};
@@ -14,7 +18,7 @@ function parseDepartures(html) {
     deps.push(departure);
   });
 
-  return deps;
+  cb(null, deps);
 }
 
 module.exports = function departures(stations, options, cb) {
@@ -62,8 +66,7 @@ module.exports = function departures(stations, options, cb) {
     });
 
     res.on('end', function() {
-      var deps = parseDepartures(body); 
-      cb(null, deps);
+      parseDepartures(body, cb);
     });
   });
 
@@ -74,9 +77,3 @@ module.exports = function departures(stations, options, cb) {
   req.end();
 };
 
-if (!module.parent) {
-  var stations = ['8603306', '8603307'];
-  module.exports(stations, { exclude: ['bus', 'train'] }, function(err, data) {
-    console.log(data);
-  });
-}
